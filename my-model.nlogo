@@ -1,5 +1,8 @@
 to setup
   clear-all
+  create-turtles 10 [
+    forward 5
+  ]
   reset-ticks
 end
 
@@ -33,6 +36,40 @@ GRAPHICS-WINDOW
 1
 ticks
 30.0
+
+BUTTON
+48
+119
+121
+152
+NIL
+setup
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+64
+216
+127
+249
+NIL
+go
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
 
 @#$#@#$#@
 ## WHAT IS IT?

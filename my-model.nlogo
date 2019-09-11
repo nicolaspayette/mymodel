@@ -1,6 +1,6 @@
 to setup
   clear-all
-  create-turtles 9 [
+  create-turtles 10 [
     forward 5
   ]
   reset-ticks

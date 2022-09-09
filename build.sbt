@@ -1,7 +1,7 @@
 resolvers += "netlogo" at "https://dl.cloudsmith.io/public/netlogo/netlogo/maven/"
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.8" % Test,
+  "org.scalatest" %% "scalatest" % "3.2.13" % Test,
   "org.nlogo" % "netlogo" % "6.2.2" % Test,
   "org.jogamp.jogl" % "jogl-all" % "2.4.0" from "https://jogamp.org/deployment/archive/rc/v2.4.0-rc-20210111/jar/jogl-all.jar",
   "org.jogamp.gluegen" % "gluegen-rt" % "2.4.0" from "https://jogamp.org/deployment/archive/rc/v2.4.0-rc-20210111/jar/gluegen-rt.jar"

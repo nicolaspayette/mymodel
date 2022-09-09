@@ -1,20 +1,18 @@
 import org.nlogo.headless.HeadlessWorkspace
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 
-class TestSuite extends FunSuite {
+class SetSuite extends AnyFunSuite {
 
-  test("test") {
+  test("Run model tests") {
       val workspace = HeadlessWorkspace.newInstance
       workspace.open("my-model.nlogo")
       try {
         workspace.command("test")
       } catch {
-        case ex: Serializable => throw ex
         case ex: Exception =>
-          // ScalaTest chokes on non-Serializable exceptions
-          // so we wrap it in a generic exception if needed
-          val msg = ex.getMessage + "\n" +
-            ex.getStackTrace.map("  " + _).mkString("\n")
+          // NetLogo exceptions are not serializable and ScalaTest complains about
+          // that so we re-wrap the exception message in a new generic exception.
+          val msg = ex.getMessage + "\n" +  ex.getStackTrace.map("  " + _).mkString("\n")
           throw new Exception(msg)
       } finally {
         workspace.dispose()

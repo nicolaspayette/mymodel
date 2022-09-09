@@ -1,6 +1,6 @@
 to setup
   clear-all
-  create-turtles 10 [
+  create-turtles 5 [
     forward 5
   ]
   reset-ticks
@@ -436,7 +436,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.1.0
+NetLogo 6.2.2
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
